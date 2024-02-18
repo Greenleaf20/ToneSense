@@ -1,18 +1,32 @@
 .emotion-output {
-    font-size:large;
-}
-
-.text-content ::ng-deep .mat-mdc-text-field-wrapper.mdc-text-field.ng-tns-c2608167813-0.mdc-text-field--filled.mdc-text-field--no-label {
-    width: 400px !important;
+    font-size: large;
 }
 
 .text-outer ::ng-deep button {
-    margin-left: 8vw !important;
+    margin-left: 1vw !important;
+}
+
+.text-content ::ng-deep .mat-mdc-text-field-wrapper.mdc-text-field.ng-tns-c2608167813-0.mdc-text-field--filled.mdc-text-field--no-label {
+    width: 5vw !important;
 }
 
 @media screen and (min-width: 600px) {
     .text-outer ::ng-deep button {
-        margin-left: 12vw;
+        margin-left: 0vw !important;
+    }
+
+    .text-content ::ng-deep .mat-mdc-text-field-wrapper.mdc-text-field.ng-tns-c2608167813-0.mdc-text-field--filled.mdc-text-field--no-label {
+        width: 15vw !important;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .text-outer ::ng-deep button {
+        margin-left: 8vw !important;
+    }
+
+    .text-content ::ng-deep .mat-mdc-text-field-wrapper.mdc-text-field.ng-tns-c2608167813-0.mdc-text-field--filled.mdc-text-field--no-label {
+        width: 25vw !important;
     }
 }
 
