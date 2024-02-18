@@ -43,6 +43,7 @@ async function fetchAndSetFile() {
     }
     const blob = await response.blob();
     const file = new File([blob], 'filename.wav');
+    console.log(file)
     return await audioQuery(file)
   } catch (error) {
     console.error('Error fetching or setting file:', error);

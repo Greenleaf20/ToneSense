@@ -2,15 +2,15 @@
   <mat-toolbar>
     <span>ToneTrend</span>
   </mat-toolbar>
-  <mat-tab-group [selectedIndex]="1">
-    <mat-tab> 
+  <mat-tab-group [selectedIndex]="0">
+    <mat-tab>
       <ng-template mat-tab-label class="icon-template">
         <span>Text</span>
         <mat-icon> chat</mat-icon>
       </ng-template>
       <app-text></app-text>
     </mat-tab>
-    <mat-tab label="Audio"> 
+    <mat-tab label="Audio">
       <ng-template mat-tab-label class="icon-template">
         <span>Audio</span>
         <mat-icon aria-hidden="false" fontIcon="mic"></mat-icon>
@@ -41,7 +41,7 @@
                 <div class="emotion-output">{{emotion}}</div>
             </div> -->
         </mat-grid-tile>
-      </mat-grid-list>      
+      </mat-grid-list>
     </mat-tab>
   </mat-tab-group>
 </div>
