@@ -1,0 +1,7 @@
+.outer > mat-tab-group ::ng-deep span.mdc-tab__text-label {
+    font-size: 25px;
+}
+
+.outer > mat-tab-group ::ng-deep .mdc-tab__text-label ::ng-deep mat-icon {
+    margin-left: 10px !important;
+}

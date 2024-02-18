@@ -1,4 +1,18 @@
-<mat-tab-group>
-  <mat-tab label="Text"> <app-text></app-text> </mat-tab>
-  <mat-tab label="Audio"> <app-audio></app-audio> </mat-tab>
-</mat-tab-group>
+<div class="outer">
+  <mat-tab-group>
+    <mat-tab> 
+      <ng-template mat-tab-label class="icon-template">
+        <span>Text</span>
+        <mat-icon> chat</mat-icon>
+      </ng-template>
+      <app-text></app-text>
+    </mat-tab>
+    <mat-tab label="Audio"> 
+      <ng-template mat-tab-label class="icon-template">
+        <span>Audio</span>
+        <mat-icon aria-hidden="false" fontIcon="mic"></mat-icon>
+      </ng-template>
+      <app-audio></app-audio> 
+    </mat-tab>
+  </mat-tab-group>
+</div>

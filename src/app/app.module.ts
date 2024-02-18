@@ -10,6 +10,11 @@ import { CommonModule } from '@angular/common';
 import { TextComponent } from './text/text.component';
 import { AudioComponent } from './audio/audio.component';
 
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {CdkTextareaAutosize, TextFieldModule} from '@angular/cdk/text-field';
+
 @NgModule({
     declarations: [
       AppComponent,
@@ -21,7 +26,7 @@ import { AudioComponent } from './audio/audio.component';
       BrowserAnimationsModule, 
       CommonModule,
       TextComponent,
-      AudioComponent
+      AudioComponent,
     ],
     providers: [],
     bootstrap: [AppComponent],
