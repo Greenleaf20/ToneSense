@@ -17,7 +17,6 @@
 }
 
 mat-toolbar.mat-toolbar.mat-toolbar-single-row {
-    /* background: #D0c2e8; */
     background-image: url(./../assets/bg5.png);
     display: flex;
     justify-content: center;
@@ -332,3 +331,4 @@ svg#clouds {
         display: none;
         visibility: hidden;
     }
+}
