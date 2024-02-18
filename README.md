@@ -1,4 +1,4 @@
-# ToneTrend
+# ToneSense
 
 This projects senses the emotion of audio and text
 
