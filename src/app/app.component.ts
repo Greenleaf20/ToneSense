@@ -36,4 +36,9 @@ export class AppComponent {
     this.isRecording = false;
     this.audioRecordingService.stopRecording();
   }
+
+  onConvert() {
+    console.log("Converting input text")
+    // this.onConvert2(this.textToConvert);
+  }
 }

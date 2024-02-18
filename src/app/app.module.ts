@@ -16,6 +16,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {CdkTextareaAutosize, TextFieldModule} from '@angular/cdk/text-field';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { FormsModule } from '@angular/forms';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
@@ -31,7 +33,9 @@ import { FormsModule } from '@angular/forms';
       TextComponent,
       AudioComponent,
       FormsModule,
-      MatToolbarModule 
+      MatToolbarModule,
+      MatGridListModule,
+      MatButtonModule  
     ],
     providers: [],
     bootstrap: [AppComponent],

@@ -12,11 +12,18 @@
     margin-left: 10px !important;
 }
 
+.record-button {
+    margin: 15px 0px 15px 0px;
+}
+
 mat-toolbar.mat-toolbar.mat-toolbar-single-row {
-    background: #D0c2e8;
+    /* background: #D0c2e8; */
+    background-image: url(./../assets/bg5.png);
     display: flex;
     justify-content: center;
     margin-bottom: 15px;
+    font-size: 40px;
+    color: #270660;
 }
 
 :host {

@@ -2,7 +2,7 @@
   <mat-toolbar>
     <span>ToneTrend</span>
   </mat-toolbar>
-  <mat-tab-group>
+  <mat-tab-group [selectedIndex]="1">
     <mat-tab> 
       <ng-template mat-tab-label class="icon-template">
         <span>Text</span>
@@ -15,23 +15,33 @@
         <span>Audio</span>
         <mat-icon aria-hidden="false" fontIcon="mic"></mat-icon>
       </ng-template>
-      <app-audio></app-audio> 
-      <div class="content" role="main">
-
-        <div class="row justify-content-center pt-2 pb-2">
-          <button title="Click here to start recording action" class="btn-mic w-auto" (click)="startRecording()"
-            *ngIf="!isRecording" style="margin-right: 3px;">
-            <img src="../assets/mic.png" />
-          </button>
-          <button title="Click here to stop recording" class="btn-stop w-auto" (click)="stopRecording()" *ngIf="isRecording"
-            style="margin-right: 3px;">
-            <img src="../assets/stop.png" />
-          </button>
-        </div>
-        <audio #audioPlayer controls style="margin: 10px;"></audio>
-        <a *ngIf="audioURL" [href]="audioURL" download="recorded_audio.wav">Download last reecorded Audio</a>
-      </div>
-      
+      <!-- <app-audio></app-audio>  -->
+      <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile>
+          <div class="content audio-content" role="main">
+            <h3>Record audio here to find the sentiment:</h3>
+            <div class="row justify-content-center pt-2 pb-2 record-button">
+              <button title="Click here to start recording action" class="btn-mic w-auto" (click)="startRecording()"
+                *ngIf="!isRecording" style="margin-right: 3px;">
+                <img src="../assets/mic.png" />
+              </button>
+              <button title="Click here to stop recording" class="btn-stop w-auto" (click)="stopRecording()" *ngIf="isRecording"
+                style="margin-right: 3px;">
+                <img src="../assets/stop.png" />
+              </button>
+            </div>
+            <audio #audioPlayer controls style="margin: 10px;"></audio>
+            <a *ngIf="audioURL" [href]="audioURL" download="recorded_audio.wav">Download last recorded Audio</a>
+          </div>
+            <button mat-stroked-button color="primary" (click)="onConvert()">Convert</button>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <!-- <div *ngIf="emotion!==''">
+                <h3>Detected emotion is:</h3>
+                <div class="emotion-output">{{emotion}}</div>
+            </div> -->
+        </mat-grid-tile>
+      </mat-grid-list>      
     </mat-tab>
   </mat-tab-group>
 </div>
