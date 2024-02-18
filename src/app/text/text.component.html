@@ -4,14 +4,20 @@
             <div class="text-content">
                 <h3>Enter text here to find the sentiment:</h3>
                 <mat-form-field>
-                    <textarea matInput [(ngModel)]="textToConvert" [ngModelOptions]="{standalone: true}"></textarea>
+                    <textarea matInput 
+                    [(ngModel)]="textToConvert" 
+                    [ngModelOptions]="{standalone: true}"
+                    cdkTextareaAutosize
+                    cdkAutosizeMinRows="15"
+                    cdkAutosizeMaxRows="15">
+                    </textarea>
                 </mat-form-field>
             </div>
             <button mat-stroked-button color="primary" (click)="onConvert()">Convert</button>
         </mat-grid-tile>
         <mat-grid-tile>
             <div *ngIf="emotion!==''">
-                <h4>Detected emotion is:</h4>
+                <h3>Detected emotion is:</h3>
                 <div class="emotion-output">{{emotion}}</div>
             </div>
         </mat-grid-tile>
