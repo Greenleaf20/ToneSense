@@ -37,6 +37,8 @@
         </mat-grid-tile>
         <mat-grid-tile>
             <div *ngIf="emotion!==''">
+                <h3>Detected Text is:</h3>
+                <div class="emotion-output">{{text}}</div>
                 <h3>Detected emotion is:</h3>
                 <div class="emotion-output">{{emotion}}</div>
             </div>

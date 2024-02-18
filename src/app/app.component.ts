@@ -52,6 +52,7 @@ export class AppComponent {
   }
 
   emotion: string = "";
+  text: string = "";
 
   onConvert(){
     console.log(this.audioFile)
@@ -60,7 +61,8 @@ export class AppComponent {
         console.log("Audio is " + outputText);
         this.textQuery(outputText).then((output) => {
           console.log("Output is " + output);
-          this.emotion = output
+          this.text = outputText
+          this.emotion =  output
         })
           .catch((error) => {
             console.error("Error during text query:", error);
