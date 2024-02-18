@@ -14,6 +14,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {CdkTextareaAutosize, TextFieldModule} from '@angular/cdk/text-field';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
     declarations: [
@@ -27,6 +29,7 @@ import {CdkTextareaAutosize, TextFieldModule} from '@angular/cdk/text-field';
       CommonModule,
       TextComponent,
       AudioComponent,
+      FormsModule
     ],
     providers: [],
     bootstrap: [AppComponent],

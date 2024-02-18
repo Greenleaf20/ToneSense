@@ -1,0 +1,11 @@
+.emotion-output {
+    font-size:large;
+}
+
+.text-content ::ng-deep .mat-mdc-text-field-wrapper.mdc-text-field.ng-tns-c2608167813-0.mdc-text-field--filled.mdc-text-field--no-label {
+    width: 500px !important;
+}
+
+.text-outer ::ng-deep button {
+    margin-left: 85px;
+}
