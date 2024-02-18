@@ -20,10 +20,10 @@ const headers = { Authorization: "Bearer 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" 
   selector: 'app-text',
   standalone: true,
   imports: [
-    MatFormFieldModule, 
-    MatSelectModule, 
-    MatInputModule, 
-    TextFieldModule, 
+    MatFormFieldModule,
+    MatSelectModule,
+    MatInputModule,
+    TextFieldModule,
     FormsModule,
     MatButtonModule,
     MatGridListModule,
@@ -37,7 +37,7 @@ export class TextComponent {
 
   }
 
-  textToConvert: string = "i love my life";
+  textToConvert: string = "";
   emotion: string = "";
 
   onConvert() {
@@ -57,7 +57,7 @@ export class TextComponent {
       throw error; // Re-throw for comprehensive error handling
     }
   }
-  
+
   op: string = "";
 
   onConvert2(inputText: string) {
