@@ -18,6 +18,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { FormsModule } from '@angular/forms';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatButtonModule } from '@angular/material/button';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { MatButtonModule } from '@angular/material/button';
       FormsModule,
       MatToolbarModule,
       MatGridListModule,
-      MatButtonModule  
+      MatButtonModule,
+      HttpClientModule  
     ],
     providers: [],
     bootstrap: [AppComponent],
