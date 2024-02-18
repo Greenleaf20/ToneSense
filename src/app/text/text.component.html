@@ -12,8 +12,8 @@
                     cdkAutosizeMaxRows="15">
                     </textarea>
                 </mat-form-field>
+                <button mat-stroked-button color="primary" (click)="onConvert()">Convert</button>
             </div>
-            <button mat-stroked-button color="primary" (click)="onConvert()">Convert</button>
         </mat-grid-tile>
         <mat-grid-tile>
             <div *ngIf="emotion!==''">
