@@ -22,7 +22,7 @@ async function textQuery(text: string): Promise<any> {
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch((err) => console.error(err));
 
-textQuery("I got married")
+textQuery("I got divorced")
   .then((output) => {
     console.log("Output is " + output);
   })
