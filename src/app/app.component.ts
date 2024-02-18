@@ -21,13 +21,22 @@ const headers = { Authorization: "Bearer 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" 
 export class AppComponent {
   title = 'sentiment-analysis';
   isRecording = false;
-  audioURL: Blob = new Blob();
+  audioURL: string | null = null;
   audioFile: File = new File([new Blob([])], 'empty-audio.mp3');
   @ViewChild('audioPlayer') audioPlayer!: ElementRef<HTMLAudioElement>;
 
   constructor(private audioRecordingService: AudioRecordingService,
     private cd: ChangeDetectorRef,
     private http: HttpClient) { }
+
+    ngOnInit() {
+      this.audioRecordingService.audioBlob$.subscribe(blob => {
+        this.audioURL = window.URL.createObjectURL(blob);
+        this.audioPlayer.nativeElement.src = this.audioURL;
+        this.cd.detectChanges();
+      });
+    }
+
   startRecording() {
     this.isRecording = true;
     this.audioRecordingService.startRecording();
