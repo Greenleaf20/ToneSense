@@ -9,3 +9,7 @@
 .text-outer ::ng-deep button {
     margin-left: 85px;
 }
+
+.text-content ::ng-deep .mdc-text-field {
+    background: #F5f1fb;
+}

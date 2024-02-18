@@ -14,6 +14,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {CdkTextareaAutosize, TextFieldModule} from '@angular/cdk/text-field';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { FormsModule } from '@angular/forms';
 
 
@@ -29,7 +30,8 @@ import { FormsModule } from '@angular/forms';
       CommonModule,
       TextComponent,
       AudioComponent,
-      FormsModule
+      FormsModule,
+      MatToolbarModule 
     ],
     providers: [],
     bootstrap: [AppComponent],
