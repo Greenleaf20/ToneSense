@@ -3,11 +3,17 @@
 }
 
 .text-content ::ng-deep .mat-mdc-text-field-wrapper.mdc-text-field.ng-tns-c2608167813-0.mdc-text-field--filled.mdc-text-field--no-label {
-    width: 500px !important;
+    width: 400px !important;
 }
 
 .text-outer ::ng-deep button {
-    margin-left: 185px;
+    margin-left: 8vw !important;
+}
+
+@media screen and (min-width: 600px) {
+    .text-outer ::ng-deep button {
+        margin-left: 12vw;
+    }
 }
 
 .text-content ::ng-deep .mdc-text-field {
