@@ -1,5 +1,3 @@
-import { AppModule } from './app/app.module';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import axios from 'axios';
 
 const SpeechToText_API_URL = "https://api-inference.huggingface.co/models/codenamewei/speech-to-text";
@@ -9,23 +7,15 @@ const headers = { Authorization: "Bearer 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" 
 async function textQuery(text: string): Promise<any> {
   try {
     const response = await axios.post(API_URL, text, { headers });
-    if (response.status != 200) {
-      throw new Error(`Error: ${response.status} - ${response.statusText}`);
+
+    if (!response.data.ok) {
+      throw new Error(`Error: ${response.data.status} - ${response.data.statusText}`);
     }
-    return response.data[0][0].label;
+
+    return response.data;
   } catch (error) {
     console.error('Error during query:', error);
     throw error; // Re-throw for comprehensive error handling
   }
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch((err) => console.error(err));
-
-textQuery("I got married")
-  .then((output) => {
-    console.log("Output is " + output);
-  })
-  .catch((error) => {
-    console.error("Error during text query:", error);
-  });
